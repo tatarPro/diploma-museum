@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9e8cd41-d156-4f96-ae11-038acc5628ec" name="Changes" comment="навайбкодил">
+    <list default="true" id="d9e8cd41-d156-4f96-ae11-038acc5628ec" name="Changes" comment="настроил порты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763988828212</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="настроил порты">
+      <option name="closed" value="true" />
+      <created>1763990827828</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763990827828</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +106,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initional commiit" />
     <MESSAGE value="навайбкодил" />
-    <option name="LAST_COMMIT_MESSAGE" value="навайбкодил" />
+    <MESSAGE value="настроил порты" />
+    <option name="LAST_COMMIT_MESSAGE" value="настроил порты" />
   </component>
 </project>
