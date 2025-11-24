@@ -16,9 +16,9 @@ from jose import JWTError, jwt
 
 # --- КОНФИГУРАЦИЯ ---
 # Замените данные ниже на свои настройки MySQL
-DATABASE_URL = "mysql+mysqlconnector://root:password@localhost/museum_db"
+DATABASE_URL = "mysql+mysqlconnector://root:@localhost/museum_db"
 
-SECRET_KEY = "YOUR_SUPER_SECRET_KEY_FOR_JWT"  # Поменяй на длинную случайную строку
+SECRET_KEY = "HYPERBOREA_IS_WAITING"  # Поменяй на длинную случайную строку
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
