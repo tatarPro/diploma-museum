@@ -137,7 +137,7 @@ class UserOut(BaseModel):
     role: UserRole
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class ExhibitOut(BaseModel):
@@ -149,7 +149,7 @@ class ExhibitOut(BaseModel):
     created_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 # --- APP INIT ---
@@ -210,12 +210,12 @@ def init_admin(db: Session = Depends(get_db)):
 
     admin = User(
         login="admin",
-        password_hash=get_password_hash("admin123"),
+        password_hash=get_password_hash("1"),
         role=UserRole.ADMIN
     )
     db.add(admin)
     db.commit()
-    return {"message": "Admin user created: login=admin, pass=admin123"}
+    return {"message": "Admin user created: login=admin, pass=1"}
 
 
 # 3. Экспонаты (Общедоступно - чтение)
