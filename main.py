@@ -14,9 +14,10 @@ from sqlalchemy.orm import sessionmaker, declarative_base, Session, relationship
 from passlib.context import CryptContext
 from jose import JWTError, jwt
 
-# --- КОНФИГУРАЦИЯ ---
-DATABASE_URL = "mysql+mysqlconnector://root:@localhost/museum_db"
-SECRET_KEY = "HYPERBOREA_FOREVERT"
+#КОНФИГУРАЦИЯ
+DATABASE_URL = "mysql+mysqlconnector://root:@localhost/museum_db" #обычно в этой строке также указывается пароль,
+# но так как мы используем XAMPP, пароль не нужен
+SECRET_KEY = "ILKAEV"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
@@ -26,13 +27,11 @@ MODEL_DIR = os.path.join(UPLOAD_DIR, "models")
 os.makedirs(IMG_DIR, exist_ok=True)
 os.makedirs(MODEL_DIR, exist_ok=True)
 
-# --- DATABASE SETUP ---
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 
-# --- MODELS (SQLAlchemy) ---
 class UserRole(str, Enum):
     ADMIN = "admin"
     MODERATOR = "moderator"
@@ -53,8 +52,8 @@ class Article(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String(255))
     content = Column(Text)
-    preview_image_url = Column(String(255))  # Фото на карточке
-    main_image_url = Column(String(255))  # Фото в начале статьи
+    preview_image_url = Column(String(255))
+    main_image_url = Column(String(255))
     author_id = Column(Integer, ForeignKey("users.id"))
     created_at = Column(DateTime, default=datetime.utcnow)
 
